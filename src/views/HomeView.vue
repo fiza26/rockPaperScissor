@@ -52,7 +52,7 @@ export default {
       <div class="circle-three"></div>
       <div class="box">
         <div class="content">
-          <h2>ROCK SCISSOR PAPER</h2>
+          <h2>ROCK PAPER SCISSOR</h2>
           <hr>
           <div class="choice" v-show="!userChoice">
             <div @click="play('rock')"><img
@@ -104,6 +104,10 @@ export default {
 
 .container {
   margin: 10px;
+}
+
+hr {
+  border: 1px solid white;
 }
 
 .box {
@@ -331,6 +335,11 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .box {
+    min-height: 800px;
+    margin: 10px auto;
+  }
+
   .choice {
     display: flex;
     flex-wrap: wrap;
@@ -338,7 +347,16 @@ button {
   }
 
   .choice div {
+    margin-top: 30px;
     margin-bottom: 10px;
+  }
+
+  .loading {
+    flex-direction: column;
+  }
+
+  .loading div {
+    margin-top: 50px;
   }
 
   .circle,
@@ -346,4 +364,5 @@ button {
   .circle-three {
     display: none;
   }
-}</style>
+}
+</style>
